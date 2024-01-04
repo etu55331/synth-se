@@ -124,3 +124,26 @@ git pull orign main
 
 verifier si vous avez tout les branches qui sont presente sur le github 
 git branch
+
+
+
+
+
+
+Comment faire une modification  sur le github :
+pull request
+git branch <nom de la nouvelle branch>
+git checkout <nom de la nouvelle branch>
+
+mettre le fichier dans le git 
+git add <nom de fichier.extension>
+
+faire un commit 
+git commit -m "description des modif ou fichier"
+
+mettre les fichier sur git hub 
+git push 
+
+ensuite ca vous ouvrir le site github
+et créer un compare et pull request 
+et le valider
