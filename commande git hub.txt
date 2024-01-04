@@ -65,3 +65,27 @@ git reset est une commande pour annuler un commit  3 façons différentes (--sof
 git reset --hard HEAD^ 67251e58d4b794ee28602bf96d457adad55f3d16 
 
 git blame permet de savoir qui a réalisé telle modification dans un fichier, à quelle date, ligne par ligne.
+
+
+
+
+
+branch:
+
+créer une branch
+git branch <nom de la branche>
+
+lister les branch
+git branch 
+
+changer de branch
+git checkout <nom de la branche>
+
+fusionner des branch
+git merge <nom de la branche>
+
+supprimer une branch
+git branch -d <nom de la branche>
+
+enregistre les modifications non indexées pour une utilisation ultérieure.
+git stash 
