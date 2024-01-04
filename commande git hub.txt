@@ -110,3 +110,17 @@ git remote add origin https://github.com/etu55331/synth-se.git
 git branch -M main
 git push -u origin main
 
+
+
+
+comment recuperer les donner du github en local:
+git clone  https://github.com/etu55331/synth-se.git
+
+aller dans le depot 
+cd <nom du github en local>
+
+recuper la derniere version 
+git pull orign main 
+
+verifier si vous avez tout les branches qui sont presente sur le github 
+git branch
