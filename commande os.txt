@@ -1,0 +1,27 @@
+labo 2:
+
+commande sur linux
+changement de mots de passe sur linux
+passwd
+
+comment creer un dossier
+mkdir <nom du dossier>
+
+comment creer un fichier
+touch <nom du fichier>
+
+avoir la date 
+date
+
+lister les fichier 
+ls
+
+regarder la fin d'un fichier
+tail -<nombre de charactère> <le chemin>
+
+
+regarder le debut d'un fichier 
+head -<nombre de charactère> <le chemin>
+
+affichez le nombre de lignes, de mots et de caractères d'un fichier
+wc <le chemin>
