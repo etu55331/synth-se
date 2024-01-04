@@ -35,3 +35,33 @@ git init
 
 mettre le fichier dans le git 
 git add <nom de fichier.extension>
+
+
+
+
+
+commit:
+
+faire un commit 
+git commit -m "description"
+
+corriger un commit 
+git commit --amend
+comment annuler un commit
+git commit --amend --no-edit
+
+annuler un commit
+git log 
+commit 67251e58d4b794ee28602bf96d457adad55f3d16
+
+pour voir le status si fichier pas commit 
+git status
+
+supprimer un commit 
+afficher l'historique de commit sur la branche 
+git log 
+
+git reset est une commande pour annuler un commit  3 façons différentes (--soft; --mixed; --hard) 
+git reset --hard HEAD^ 67251e58d4b794ee28602bf96d457adad55f3d16 
+
+git blame permet de savoir qui a réalisé telle modification dans un fichier, à quelle date, ligne par ligne.
