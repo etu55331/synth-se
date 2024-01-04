@@ -21,3 +21,17 @@ git config --global color.branch auto
 configuration des d editeur de texte de base pour git 
 git config --global core. editor vim
 git config --global merge. tool vimdiff
+
+
+
+utilisation de git :
+
+creation de base 
+aller dans le fichier de base
+cd pour rentrer dans fichier créer
+
+inistialiser le git
+git init 
+
+mettre le fichier dans le git 
+git add <nom de fichier.extension>
