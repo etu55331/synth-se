@@ -57,3 +57,27 @@ cat exercice10
 
 Tout en restant avec cet utilisateur, vous allez rediriger la toute dernière ligne du fichier /etc/passwd dans un autre nommé info_coco tail -I /etc/passwd > info_coco
 cat info coco
+
+
+
+
+
+labo 4:
+
+une commande un ensemble de dossiers de « fic00 » à « fic99 » dans lesquels il y a les dossier « subfolder00 » à « subfolder99 »
+mkdir -p fic{00..99}/subfolder{00..99}
+
+Effacer tous les dossiers « subfolder55 »
+rm -r fic{00..99}/subfolder55
+
+Dans le dossier « fic55/subfolder56 », créer les fichier « fichiera » à « fichierz »
+touch fic55/subfolder56/{fichiera..fichierz}
+
+Déplacer le dossier « fic11 » dans le dossier « fic12 »
+mv fic11 fic12/
+
+Afficher un message affichant la date courant et l’heure courante au format suivant 
+echo -e "Bonjour, \nnous sommes le $(date +%d/%m/%y)\n\net il est $(date +%T)"
+
+Dans chaque dossier « ficxx » contenant un « 0 », créez un fichier « nv_date » où « date » est la date au format <année sur 2 digits>_<mois sur 2 digits>_<jour sur 2 digits>
+touch fic0{0..9}/nv_$(date +%y_%m_%d) or fic{1..9}0/nv_$(date +%y_%m_%d)
