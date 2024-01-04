@@ -1,0 +1,23 @@
+configuration de git de base:
+
+faire un cd pour aller au bonne endroit 
+
+creation fichier de base
+mkdir pour créér le fichier 
+
+config de base git 
+dire qui fait les edit nom  sur git
+
+commande global a faire a l'installation de git  
+git config --global user.name "Duchene Nathanael"
+dire qui fait les edit mail sur git 
+git config --global user.mail "etu55331@student.henallux.be"
+
+configuration des couleur sur git en auto 
+git config --global color.diff auto
+git config --global color.satus auto 
+git config --global color.branch auto 
+
+configuration des d editeur de texte de base pour git 
+git config --global core. editor vim
+git config --global merge. tool vimdiff
