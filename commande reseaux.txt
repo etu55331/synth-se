@@ -24,3 +24,98 @@ netsh interface set interface "Ethernet" disable : Désactive une carte réseau.
 route print : Affiche la table de routage IP.
 route add [-p] 0.0.0.0 mask 0.0.0.0 192.168.1.1 : Ajoute une route par défaut.
 route delete 0.0.0.0 : Supprime la route par défaut.
+
+
+
+
+
+
+
+manip 4:
+ip addr show (ou ip -6 addr show pour l'IPv6)
+
+Affiche les cartes réseau et les protocoles configurés.
+ ip link show
+
+Affiche l'adresse MAC.
+ip route show
+
+Affiche les routes configurées sur le serveur, incluant la passerelle par défaut.
+Commande : cat /etc/resolv.conf
+
+Affiche le contenu du fichier resolv.conf, indiquant les serveurs DNS utilisés.
+
+
+Configuration des Paramètres Réseaux via les Fichiers de Configuration :
+cp /etc/network/interfaces /etc/network/interfaces.backup
+
+Crée une copie de sauvegarde du fichier de configuration.
+cat /etc/network/interfaces
+
+Affiche le contenu du fichier de configuration.
+nano /etc/network/interfaces
+
+Utilise l'éditeur nano pour modifier le fichier de configuration.
+
+Le fichier /etc/network/interfaces est structuré, comprenant des sections pour la loopback, l'activation de l'interface, la configuration IPv4, la configuration IPv6, etc.
+Commandes de Configuration IPv4 :
+iface enp0s3 inet dhcp : Configuration DHCP pour IPv4.
+iface enp0s3 inet static : Configuration statique pour IPv4.
+Commandes de Configuration IPv6 :
+iface enp0s3 inet6 static : Configuration statique pour IPv6.
+
+
+
+Configuration des Paramètres Réseaux en Ligne de Commande :
+Retirer la Configuration d'une Interface :
+
+ip addr flush dev enp0s3 (ou ip -6 addr flush dev enp0s3 pour IPv6).
+Ajouter une Adresse Supplémentaire (Alias) :
+
+ip addr add <IP_address>/<subnet_mask> dev enp0s3.
+Supprimer une Adresse :
+
+ip addr del <IP_address> dev enp0s3.
+Configurer une Interface en DHCP :
+
+dhclient -v enp0s3.
+Changer le Hostname Temporairement :
+
+hostname MonNouvelHostname.
+Modifier Temporairement le fichier /etc/resolv.conf :
+
+Éditer le fichier avec nano /etc/resolv.conf (à éviter si possible).
+Supprimer et Reconfigurer le Default Gateway :
+
+ip route del default : Supprime la passerelle par défaut.
+ip route add default via <Gateway_IP> : Ajoute une nouvelle passerelle.
+Créer et Supprimer des Routes Statiques :
+
+ip route add <Network_IP>/<subnet_mask> via <Gateway_IP> : Ajoute une route statique.
+ip route del <Network_IP>/<subnet_mask> : Supprime une route statique.
+Mettre une Interface UP/DOWN :
+
+Déconfigure l'interface
+ifdown enp0s3 
+Configure l'interface.
+ifup enp0s3
+Changer la MAC Address sur une Interface :
+ip link set dev enp0s3 address <new_MAC>.
+
+
+Configuration en DHCP :
+
+iface enp0s3 inet dhcp dans le fichier de configuration.
+Utiliser dhclient -v enp0s3 pour obtenir une adresse DHCP.
+Configuration Statique via les Fichiers de Configuration :
+
+Configurer en statique avec adresse, masque, passerelle, etc.
+Configuration IPv6 Statique :
+
+Configurer l'IPv6 statique dans le fichier de configuration.
+Modes de Rechargement de Configuration :
+
+reboot, systemctl restart networking, ifdown enp0s3 + ifup enp0s3.
+Création de Routes Statiques :
+
+Configurer le hostname avec hostnamectl.
