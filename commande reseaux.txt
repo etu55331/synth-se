@@ -1,0 +1,26 @@
+manip 3:
+ipconfig : Affiche la configuration réseau actuelle.
+ipconfig /all : Affiche des informations détaillées sur toutes les interfaces réseau.
+ipconfig /? : Affiche l'aide pour la commande ipconfig.
+route print : Affiche la table de routage IP.
+
+Configuration des paramètres réseau :
+netsh interface show interface : Affiche l'état et le type des interfaces réseau.
+netsh interface ip set address "Ethernet" static <IPV4_address> <netmask> [<Default_Gateway>] : Configure une adresse IP statique sur une interface Ethernet.
+Exemple : netsh interface ip set address "Ethernet" static 192.168.1.99 255.255.255.0 192.168.1.1
+netsh interface ipv6 set address "Ethernet" 2a02:a03f:4299:e700:988f:c0df:a00f:856c/64 : Configure une adresse IPv6 statique sur une interface Ethernet.
+netsh interface ip add address "Ethernet" 192.168.1.99 255.255.255.0 : Ajoute une adresse IP supplémentaire sur une interface Ethernet.
+netsh interface ipv6 add address "Ethernet" 2a02:a03f:4299:e700:988f:c0df:a00f:856c/64 : Ajoute une adresse IPv6 supplémentaire sur une interface Ethernet.
+netsh interface ip delete address "Ethernet" 192.168.1.99 : Supprime une adresse IP d'une interface Ethernet.
+netsh interface ipv6 delete address "Ethernet" 2a02:a03f:4299:e700:988f:c0df:a00f:856c : Supprime une adresse IPv6 d'une interface Ethernet.
+netsh interface ip set address "Ethernet" dhcp : Configure une interface Ethernet pour utiliser une adresse IP dynamique (DHCP).
+ipconfig /release : Libère l'adresse IP actuelle.
+ipconfig /renew : Renouvelle l'adresse IP depuis un serveur DHCP.
+netsh interface ip set dns "Ethernet" static 192.168.1.1 : Configure un serveur DNS statique.
+netsh interface ip add dns "Ethernet" 8.8.8.8 : Ajoute un serveur DNS supplémentaire.
+netsh interface ip set dns Ethernet dhcp : Configure une interface Ethernet pour utiliser le DNS dynamique.
+netsh interface set interface "Ethernet" enable : Active une carte réseau.
+netsh interface set interface "Ethernet" disable : Désactive une carte réseau.
+route print : Affiche la table de routage IP.
+route add [-p] 0.0.0.0 mask 0.0.0.0 192.168.1.1 : Ajoute une route par défaut.
+route delete 0.0.0.0 : Supprime la route par défaut.
