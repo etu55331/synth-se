@@ -25,3 +25,35 @@ head -<nombre de charactère> <le chemin>
 
 affichez le nombre de lignes, de mots et de caractères d'un fichier
 wc <le chemin>
+
+
+
+
+labo 3: 
+se connecter en root
+su root
+
+installer une application
+apt-get install <nom application>
+
+editer du texte 
+nano <nom du fichier>
+
+Elle liste les partitions de tous les disques sur le système et redirige ces informations vers un fichier nommé "disk_ex5". 
+sudo fdisk -l >disk_ex5
+
+creer un utilisateur
+sudo adduser <user>
+
+Créez un utilisateur coco avec useradd tout en restant connecté avec votre utilisateur de base. Son Uid doit être de 1050. Il doit avoir un répertoire personnel dans /home et avoir le shell par défaut. Mettez-lui un mot de passe simple.
+sudo useradd coco -u 1050 -m -d /home/coco -s /bin/bash
+
+Connectez-vous avec coco et faites en sorte qu’il puisse aussi utiliser la commande sudo
+adduser coco sudo
+
+Affichez les informations de l’utilisateur coco et redirigez-les dans un fichier exercice10
+id coco > exercice10
+cat exercice10
+
+Tout en restant avec cet utilisateur, vous allez rediriger la toute dernière ligne du fichier /etc/passwd dans un autre nommé info_coco tail -I /etc/passwd > info_coco
+cat info coco
