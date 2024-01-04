@@ -81,3 +81,79 @@ echo -e "Bonjour, \nnous sommes le $(date +%d/%m/%y)\n\net il est $(date +%T)"
 
 Dans chaque dossier « ficxx » contenant un « 0 », créez un fichier « nv_date » où « date » est la date au format <année sur 2 digits>_<mois sur 2 digits>_<jour sur 2 digits>
 touch fic0{0..9}/nv_$(date +%y_%m_%d) or fic{1..9}0/nv_$(date +%y_%m_%d)
+
+
+
+
+
+
+
+labo 5:
+
+afficher les variable d'environement
+set
+
+affiche juste tmp dans la console
+Echo tmp 
+
+affiche le chemin du répertoire
+Echo %tmp 
+
+affiche juste path dans la console
+Echo path
+
+permettant au système de les trouver automatiquement dans les répertoires spécifiés,
+Echo %path
+
+
+afficher les fichier dans le repertoire
+dir 
+
+suivi d’un nom de fichier pour trouver un fichier
+Dir /S 
+
+avoir toutes les commande DIR
+Dir help
+
+Dir sous repertoire ordre antialphabétique
+dir /d /S /O-n
+
+Dir fichier caché 
+dir /a
+
+
+creer un dossier 
+mkdir <nom du dossier>
+
+aller dans le dossier 
+cd <nom du dossier>
+
+creer plusieur dossier a la fois 
+mkdir <nom du dossier> <nom du dossier1> <nom du dossier2>
+
+creer des sous dossier dans un dossier 
+mkdir c\<dossier>\<sous dossier1>\<sous dossier2>\<sous dossier3>
+
+supprimer un dossier ou fichier 
+rd <nom du dossier>
+
+Listez toutes les polices de caractères du répertoire C:\Windows\Fonts Listez toutes les polices de caractères du répertoire C:\Windows\Fonts 
+dir w*.ttf
+
+Listez ensuite les polices se nommant vga suivit de 3 caractères et d’extension .fon.
+dir vga???.fon
+
+Finalement, listez toutes les polices ayant un nom de 4 lettres et d’extension quelconque.
+dir ???.*
+
+copy 
+C:\Windows\Fonts
+
+creer un utilisateur 
+net user <nom d'utilisateur> <mot de passe> /add
+
+creer un groupe 
+net localgroup <nom du groupe> /add
+
+ajouter un utilisateur dans un groupe 
+net localgroup <nom de groupe> <nom d'utilisateur> /add
