@@ -156,3 +156,27 @@ Suivi de flux TCP :
 Filtrer les paquets TCP liés à une IP : ip.addr eq <IP_site>
 manip 
 
+
+
+
+
+
+
+
+manip 9
+Activer le routage sous Linux:
+
+Ouvre le fichier de configuration du système.
+sudo nano /etc/sysctl.conf
+
+Active le routage IP.
+net.ipv4.ip_forward=1
+
+Applique les changements de configuration.
+sudo sysctl -p
+
+Ajouter une route sous Linux:
+sudo ip route add ReseauDeDestination/Masque via Ip_NextHop
+
+Ajoute une route pour diriger le trafic vers un réseau spécifique via une passerelle spécifiée.
+sudo ip route add ReseauDeDestination/Masque via Ip_NextHop
