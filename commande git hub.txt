@@ -89,3 +89,24 @@ git branch -d <nom de la branche>
 
 enregistre les modifications non indexées pour une utilisation ultérieure.
 git stash 
+
+
+
+
+
+
+première configuration de git avec git hub:
+a taper sur git
+ssh-keygen -t ed25519 -C "etu55331@student.henallux.be"
+cat C:\Users\nathd\.ssh\id_ed25519.pub | clip
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHbkzs/8z6pfbbwsYlP4BUq6yI2xdMWzZvcUf0vmLnHL etu55331@student.henallux.be
+
+sur le site git hub 
+la clé obtenu est a mettre sur le site github dans parametre et ensuite dans ssh et GPG Keys 
+create a new ssh keys et ensuite mettre les donner copier du ssh-keygen 
+
+aller dans le git et tapper ca 
+git remote add origin https://github.com/etu55331/synth-se.git
+git branch -M main
+git push -u origin main
+
