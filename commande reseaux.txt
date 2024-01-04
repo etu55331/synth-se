@@ -119,3 +119,40 @@ reboot, systemctl restart networking, ifdown enp0s3 + ifup enp0s3.
 Création de Routes Statiques :
 
 Configurer le hostname avec hostnamectl.
+
+
+
+
+
+
+
+
+manip 8
+ARP :
+
+Afficher la table ARP : ip neigh show.
+Effacer la table ARP : ip neigh flush all.
+Analyse DHCP :
+
+Informer le serveur DHCP que vous libérez votre adresse : dhclient -r -v eth0.
+Faire une demande au serveur DHCP pour obtenir un nouveau bail : dhclient -v eth0.
+Analyse DNS :
+
+Filtrer les paquets DNS dans Wireshark : dns.
+Utiliser nslookup pour interroger un domaine : nslookup <domaine>.
+Session TCP :
+
+Établir une session SSH : ssh <IP_voisin>.
+Analyse d'une session HTTP :
+
+Filtrer les paquets HTTP dans Wireshark : http.
+Surfer sur un site web et analyser la capture.
+Analyse d'une session HTTPS :
+
+Filtrer les paquets sur le port 443 : tcp.port eq 443.
+Surfer sur un site sécurisé et analyser la capture.
+Suivi de flux TCP :
+
+Filtrer les paquets TCP liés à une IP : ip.addr eq <IP_site>
+manip 
+
